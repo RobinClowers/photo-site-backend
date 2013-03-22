@@ -1,0 +1,8 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<% if current_user %>
+  <p class="">Hello <%= current_user.name %></p>
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+<% else %>
+  <%= link_to "Log in with Facebook", user_omniauth_authorize_url(:facebook) %>
+<% end %>
