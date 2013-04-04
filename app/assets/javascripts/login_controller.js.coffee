@@ -3,9 +3,7 @@ class LoginController
     @loadLoginView()
 
   loadLoginView: ->
-    host = "photo-site.dev"
-    path = "//#{host}/login"
-    $.get path, (form) ->
+    $.get '/login', (form) ->
         $(".login-view").append form
 
 new LoginController()
