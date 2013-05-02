@@ -10,6 +10,7 @@ group :production do
   gem 'thin'
 end
 
+gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
