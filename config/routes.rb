@@ -1,4 +1,8 @@
 PhotoSiteBackend::Application.routes.draw do
+  resources :comments, only: [:new, :create, :destroy] do
+    get :for, on: :member
+  end
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   # The priority is based upon order of creation:
